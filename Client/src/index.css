@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../public/wallpapers.jpg');
-    background-repeat: no-repeat;
-    background-size:100%;
-    background-position: center;
-    background-attachment: fixed;
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/wallpapers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
+/* dark mode looking scrollbar */
+

@@ -58,7 +58,7 @@ function Login(props) {
             {"Don't"} have an account?
           </a>
           <div>
-            <button className="btn btn-block btn-lg mt-2 flex justify-center items-center py-6">Login</button>
+            <button className="btn btn-block btn-circle text-2xl mt-2 flex justify-center items-center ">Login</button>
           </div>
         </form>
       </div>
