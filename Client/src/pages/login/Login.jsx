@@ -1,12 +1,27 @@
 import React, { useState } from "react";
 import { LiaEyeSlashSolid } from "react-icons/lia";
 import { LiaEyeSolid } from "react-icons/lia";
+import { Link } from "react-router-dom";
+import useLogin from "../../hooks/useLogin";
 
 function Login(props) {
-  const [ hide, setHide ] = useState(true);
+  const [hide, setHide] = useState(true);
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
 
+  const { loading, login } = useLogin();
+  // to submit
 
-//   to hide password
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await login(userName, password);
+    } catch (error) {
+      console.error("Login failed:", error);
+    }
+  };
+
+  //   to hide password
   const handlePasswordHide = () => {
     setHide(!hide);
   };
@@ -18,7 +33,7 @@ function Login(props) {
           Login
           <span className="text-indigo-500"> ChatMeApp</span>
         </h1>
-        <form>
+        <form onSubmit={handleSubmit}>
           {/* username */}
           <div>
             <label className="label p-2" htmlFor="">
@@ -28,6 +43,8 @@ function Login(props) {
               type="text"
               placeholder="Enter UserName"
               className="w-full input input-bordered h-10"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
             />
           </div>
 
@@ -42,6 +59,8 @@ function Login(props) {
                 id="password"
                 placeholder="Enter Password"
                 className="w-full input input-bordered h-10 pr-10"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
               <span
                 className="absolute right-3 cursor-pointer text-xl text-gray-500"
@@ -51,14 +70,23 @@ function Login(props) {
               </span>
             </div>
           </div>
-          <a
-            href="#"
+          <Link
+            to={"/signup"}
             className="text-sm hover:underline hover:text-sky-500 mt-2 inline-block"
           >
             {"Don't"} have an account?
-          </a>
+          </Link>
           <div>
-            <button className="btn btn-block btn-circle text-2xl mt-2 flex justify-center items-center ">Login</button>
+            <button
+              className="btn btn-block btn-circle text-2xl mt-2 flex justify-center items-center "
+              disabled={loading}
+            >
+              {loading ? (
+                <span className="loading loading-spinner"></span>
+              ) : (
+                "Login"
+              )}
+            </button>
           </div>
         </form>
       </div>
