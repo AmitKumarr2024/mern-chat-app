@@ -113,7 +113,7 @@ const{loading,signup}=useSignup()
                 }
               />
               <span
-                className="absolute right-3 cursor-pointer text-xl text-gray-100"
+                className="absolute right-3 cursor-pointer text-xl text-gray-500"
                 onClick={handlePasswordHide}
               >
                 {hide ? <LiaEyeSlashSolid /> : <LiaEyeSolid />}
