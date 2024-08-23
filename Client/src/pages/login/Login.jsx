@@ -37,7 +37,7 @@ function Login(props) {
           {/* username */}
           <div>
             <label className="label p-2" htmlFor="">
-              <span className="text-base label-text">UserName</span>
+              <span className="text-base label-text text-white">UserName</span>
             </label>
             <input
               type="text"
@@ -51,7 +51,7 @@ function Login(props) {
           {/* password */}
           <div>
             <label className="label p-2" htmlFor="">
-              <span className="text-base label-text">Password</span>
+              <span className="text-base label-text text-white">Password</span>
             </label>
             <div className="flex items-center relative">
               <input

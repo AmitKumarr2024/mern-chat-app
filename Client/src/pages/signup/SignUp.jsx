@@ -47,7 +47,7 @@ const{loading,signup}=useSignup()
         <form onSubmit={handleSubmit}>
           <div>
             <label className="label p-2" htmlFor="">
-              <span className="text-base label-text">Full Name</span>
+              <span className="text-base label-text text-white">Full Name</span>
             </label>
             <input
               type="text"
@@ -60,7 +60,7 @@ const{loading,signup}=useSignup()
 
           <div>
             <label className="label p-2" htmlFor="">
-              <span className="text-base label-text">User Name</span>
+              <span className="text-base label-text text-white">User Name</span>
             </label>
             <input
               type="text"
@@ -74,7 +74,7 @@ const{loading,signup}=useSignup()
           {/* password */}
           <div>
             <label className="label p-2" htmlFor="">
-              <span className="text-base label-text">Password</span>
+              <span className="text-base label-text text-white">Password</span>
             </label>
             <div className="flex items-center relative">
               <input
@@ -99,7 +99,7 @@ const{loading,signup}=useSignup()
           {/* confirm password */}
           <div>
             <label className="label p-2" htmlFor="">
-              <span className="text-base label-text">Confirm Password</span>
+              <span className="text-base label-text text-white">Confirm Password</span>
             </label>
             <div className="flex items-center relative">
               <input
@@ -113,7 +113,7 @@ const{loading,signup}=useSignup()
                 }
               />
               <span
-                className="absolute right-3 cursor-pointer text-xl text-gray-500"
+                className="absolute right-3 cursor-pointer text-xl text-gray-100"
                 onClick={handlePasswordHide}
               >
                 {hide ? <LiaEyeSlashSolid /> : <LiaEyeSolid />}
