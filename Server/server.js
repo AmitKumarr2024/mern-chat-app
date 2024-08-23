@@ -6,9 +6,9 @@ import messageRoute from "../Server/Components/chat/message.route.js";
 import userRoute from "./Components/users/user.route.js";
 import connectToMongoDb from "./config/connecToMongoDb.js";
 import cookieParser from "cookie-parser";
+import { app, server } from "./socket/socket.js";
 dotenv.config();
 
-const app = new express();
 const PORT = process.env.PORT || 8001;
 
 app.use(express.json()); //to parse the incoming request with JSON Payloads
@@ -22,7 +22,7 @@ app.use("/api/users/", userRoute);
 //   res.status(200).send("<h1>Hello Amit</h1>");
 // });
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   connectToMongoDb();
   console.log(`Server is running at port: ${chalk.bold.red(PORT)}`);
 });
