@@ -6,7 +6,7 @@ import ProfilePic from "./ProfilePic";
 
 const Sidebar = () => {
   return (
-    <div className="border-r border-slate-500 p-4 flex flex-col w-20 md:w-64 "> 
+    <div className="border-r border-slate-500 p-4 flex flex-col w-32 md:w-96 "> 
       {/* sm:w-16 for small screens and md:w-64 for medium and above screens */}
       <SearchInput />
       <div className="divider px-3"></div>
