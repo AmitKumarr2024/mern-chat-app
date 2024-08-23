@@ -17,7 +17,7 @@ export const SocketContextProvider = ({ children }) => {
   useEffect(() => {
     console.log("AuthUser changed:", authUser); // Debugging log
     if (authUser) {
-      const socket = io("http://localhost:8000", {
+      const socket = io("https://mern-chat-me-app.onrender.com", {
         query: {
           userId: authUser?.data?._id,
         },
