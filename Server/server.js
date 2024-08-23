@@ -1,3 +1,4 @@
+import path from "path";
 import express from "express";
 import dotenv from "dotenv";
 import chalk from "chalk";
@@ -11,13 +12,18 @@ dotenv.config();
 
 const PORT = process.env.PORT || 8001;
 
+const __dirname = path.resolve();
+
 app.use(express.json()); //to parse the incoming request with JSON Payloads
 app.use(cookieParser());
 
 app.use("/api/auth/", authRoute);
 app.use("/api/message/", messageRoute);
 app.use("/api/users/", userRoute);
-
+app.use(express.static(path.join(__dirname, "/Client/dist")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "Client", "dist", "index.html"));
+});
 // app.get("/", (req, res) => {
 //   res.status(200).send("<h1>Hello Amit</h1>");
 // });

@@ -19,12 +19,12 @@ const Conversation = ({ conversations, emoji, lastIdx }) => {
   return (
     <>
       <div
-        className={`flex gap-2 items-center hover:bg-sky-500 rounded p-2 py-1 cursor-pointer 
+        className={`  flex gap-2 items-center hover:bg-sky-500 rounded p-2 py-1 cursor-pointer 
         ${isSelected ? "bg-sky-500" : ""}`}
         onClick={handleClick} // Pass the handler function
       >
         <div className={`avatar  ${isOnline ? "online " : ""}`}>
-          <div className="w-12 rounded-full">
+          <div className="w-12  rounded-full">
             <img src={conversations.profilePic} alt="user Avatar" />
           </div>
         </div>

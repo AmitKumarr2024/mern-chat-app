@@ -42,7 +42,7 @@ const SearchInput = () => {
   };
 
   return (
-    <form className="flex items-center gap-2" onSubmit={handleSubmit}>
+    <form className=" flex items-center gap-2" onSubmit={handleSubmit}>
     <input
       type="text"
       placeholder="Search"
