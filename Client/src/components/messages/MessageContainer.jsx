@@ -44,7 +44,7 @@ const MessageContainer = () => {
           {/* Messages and Input Components */}
           <div className="flex flex-col flex-grow overflow-hidden">
             {/* Messages container takes available space and scrolls */}
-            <div className="flex-grow overflow-y-auto">
+            <div className="flex-grow overflow-y-scroll">
               <Messages />
             </div>
             {/* Message input at the bottom */}

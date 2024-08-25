@@ -21,7 +21,7 @@ const Messages = () => {
   }, [messages]);
 
   return (
-    <div className="px-4  flex-1 overflow-auto " ref={messageEndRef}>
+    <div className="px-4  flex-1 overflow-y-scroll " ref={messageEndRef}>
       {!loading && messages.length > 0 && (
         <>
           {conversationStartDate && (
