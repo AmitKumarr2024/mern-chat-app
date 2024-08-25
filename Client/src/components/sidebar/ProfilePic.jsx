@@ -11,7 +11,7 @@ const ProfilePic = () => {
       <div className="w-9 h-9 rounded-full border-2 border-transparent bg-clip-padding animate-colorful-glow">
         <img src={authUser.data.profilePic} className="rounded-full" alt="Profile" />
       </div>
-      <p className="text-[0.6rem] font-bold text-white">{authUser.data.fullName}</p>
+      <p className="text-[0.8rem] tracking-widest font-normal text-white">{authUser.data.fullName}</p>
     </div>
   );
 };

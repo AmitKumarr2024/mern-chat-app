@@ -7,7 +7,7 @@ const Home = () => {
   const { selectedConversation } = useConversation();
 
   return (
-    <div className="grid lg:grid-cols-[300px,1fr] h-screen max-h-screen bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
+    <div className="grid lg:grid-cols-[350px,1fr]  w-full min-h-screen bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 ">
       {/* Sidebar */}
       <section
         className={`${

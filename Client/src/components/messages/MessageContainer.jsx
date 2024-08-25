@@ -4,7 +4,7 @@ import MessageInput from "./MessageInput";
 import { RiMessage2Fill } from "react-icons/ri";
 import useConversation from "../../zustand/useConversation";
 import { useAuthContext } from "../../context/AuthContext";
-import { IoMdArrowRoundBack } from "react-icons/io";
+import { BsArrowLeft } from "react-icons/bs";
 
 const MessageContainer = () => {
   const { selectedConversation, setSelectedConversation } = useConversation();
@@ -21,36 +21,34 @@ const MessageContainer = () => {
   }, [setSelectedConversation]);
 
   return (
-    <div className="md:min-w-[650px] flex flex-col h-full">
+    <div className="md:min-w-[650px] flex flex-col h-screen relative">
       {!selectedConversation ? (
         <NoChatSelected />
       ) : (
         <>
           {/* Header */}
-          <div className="bg-slate-500 px-4 py-2">
+          <div className="bg-slate-500  py-2 w-full z-10">
             <div className="flex items-center gap-2">
-              <IoMdArrowRoundBack
+              <BsArrowLeft
                 onClick={handleBack}
                 size={30}
-                className="text-white cursor-pointer"
+                className="text-slate-100 mx-2 cursor-pointer"
               />
-              <span className="label-text">To: </span>
-              <span className="text-gray-900 font-bold">
+              <span className="label-text text-lg font-bold">To : </span>
+              <span className="text-gray-900 font-bold text-xl">
                 {selectedConversation.fullName}
               </span>
             </div>
           </div>
 
-          {/* Messages and Input Components */}
-          <div className="flex flex-col flex-grow overflow-hidden">
-            {/* Messages container takes available space and scrolls */}
-            <div className="flex-grow overflow-y-scroll">
-              <Messages />
-            </div>
-            {/* Message input at the bottom */}
-            <div className="border-t border-gray-300">
-              <MessageInput />
-            </div>
+          {/* Messages container */}
+          <div className="flex-grow h-screen   overflow-y-scroll mb-2">
+            <Messages />
+          </div>
+
+          {/* Message input at the bottom */}
+          <div className="w-full  z-10">
+            <MessageInput />
           </div>
         </>
       )}
