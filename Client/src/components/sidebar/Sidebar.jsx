@@ -6,11 +6,13 @@ import ProfilePic from "./ProfilePic";
 
 const Sidebar = () => {
   return (
-    <div className="border-r border-slate-500 p-4 flex flex-col w-24 md:w-96 "> 
+    <div className="border-r border-slate-500 p-4 flex flex-col justify-between h-screen "> 
       {/* sm:w-16 for small screens and md:w-64 for medium and above screens */}
+      <div>
       <SearchInput />
       <div className="divider px-3"></div>
       <Conversations />
+      </div>
       <div className="flex items-center justify-between gap-4 ">
         <LogoutButton />
         <ProfilePic/>

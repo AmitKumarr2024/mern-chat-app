@@ -33,3 +33,37 @@ body {
   background: linear-gradient(180deg, #2575fc, #6a11cb);
 }
 
+
+
+
+
+
+
+@keyframes colorful-glow {
+  0% {
+    border-color: #ff007f;
+    box-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
+  }
+  25% {
+    border-color: #ffbf00;
+    box-shadow: 0 0 5px #ffbf00, 0 0 10px #ffbf00, 0 0 20px #ffbf00;
+  }
+  50% {
+    border-color: #00ff7f;
+    box-shadow: 0 0 5px #00ff7f, 0 0 10px #00ff7f, 0 0 20px #00ff7f;
+  }
+  75% {
+    border-color: #007fff;
+    box-shadow: 0 0 5px #007fff, 0 0 10px #007fff, 0 0 20px #007fff;
+  }
+  100% {
+    border-color: #ff007f;
+    box-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
+  }
+}
+
+.animate-colorful-glow {
+  animation: colorful-glow 3s infinite alternate;
+  border-width: 1px;
+  border-style: dotted;
+}
