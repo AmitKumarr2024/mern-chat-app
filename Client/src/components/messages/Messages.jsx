@@ -25,7 +25,7 @@ const Messages = () => {
       {!loading && messages.length > 0 && (
         <>
           {conversationStartDate && (
-            <div className="text-center text-gray-400 my-4">
+            <div className="text-center bg-black px-2 rounded-2xl text-gray-400 my-4">
               {conversationStartDate}
             </div>
           )}
