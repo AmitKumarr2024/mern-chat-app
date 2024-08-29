@@ -1,10 +1,10 @@
 # Simple Socket.io MERN Chat App
 
-A real-time chat application built using the MERN stack with Socket.io. The application features user authentication, chat functionality, and is mobile responsive.
+A real-time chat application built using the MERN stack with Socket.io. The application features user authentication, and chat functionality, and is mobile responsive.
 
 ## Technologies Used
 
-- **Frontend:** React.js, Context API
+- **Frontend:** React.js, Context API, Zustand
 - **Backend:** Node.js, Express.js, REST API
 - **Database:** MongoDB
 - **Authentication:** JWT Authentication
@@ -23,3 +23,6 @@ A real-time chat application built using the MERN stack with Socket.io. The appl
 ## Project link
 
  https://mern-chat-me-app.onrender.com/
+
+## Note
+- This web app is open with 50 seconds of delay because of the free plan.
